@@ -138,7 +138,7 @@ class App {
     this.loadingBar.visible = true;
 
     loader.load(
-      "ELE.glb", // Assuming your single model is named 'model.glb'
+      "ELE.glb", 
       function (gltf) {
         self.scene.add(gltf.scene);
         self.chair = gltf.scene;
