@@ -35,27 +35,6 @@
     document.addEventListener("DOMContentLoaded", function () {
       const app = new App();
       window.app = app;
-
-      const placeButton = document.getElementById("place-button");
-      const detectedModel = document.getElementById("detectedModel");
-
-      // Handle AR events
-      detectedModel.addEventListener("targetFound", () => {
-        console.log("Target found");
-        placeButton.style.display = "block";
-      });
-
-      detectedModel.addEventListener("targetLost", () => {
-        console.log("Target lost");
-        placeButton.style.display = "none";
-      });
-
-      // Handle Place Model Button
-      placeButton.addEventListener("click", () => {
-        console.log("Placing model...");
-        detectedModel.setAttribute("position", "0 0 0");
-        placeButton.style.display = "none"; // Hide button after placing
-      });
     });
   </script>
 </html>
